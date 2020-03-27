@@ -1,0 +1,39 @@
+﻿//
+// Окна
+//
+
+.popover {
+  top: 100%;
+  padding: 0;
+  font-size: 13px;
+  border-radius: 0;
+  max-width: 600px;
+}
+
+.modal-dialog {
+  line-height: 1.2;
+  font-size: 13px;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  padding: 10px 15px;
+  background: $gray-lighter;
+}
+.modal-header h4 {
+  font-size: 17px;
+}
+.modal-body {
+  padding: 10px 15px;
+}
+.modal-footer {
+  padding: 10px 15px;
+  background: $gray-lighter;
+}
+
+.modal-dialog .form-group {
+  margin-bottom: 10px;
+}

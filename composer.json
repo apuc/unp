@@ -1,0 +1,95 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "barryvdh/laravel-debugbar": "^3.2",
+        "barryvdh/laravel-ide-helper": "^2.6",
+        "bcncommerce/json-stream": "dev-master",
+        "davejamesmiller/laravel-breadcrumbs": "^5.3",
+        "felixkiss/uniquewith-validator": "^3.3",
+        "fideloper/proxy": "^4.2",
+        "intervention/image": "^2.5",
+        "laravel/framework": "^6.2",
+        "laravel/helpers": "^1.1",
+        "laravel/passport": "^8.0",
+        "laravel/tinker": "^1.0",
+        "seld/jsonlint": "^1.7",
+        "siteset/dump": "dev-master",
+        "siteset/sitemap": "dev-master",
+        "socialiteproviders/facebook": "^1.0",
+        "socialiteproviders/google": "dev-master",
+        "socialiteproviders/vkontakte": "^4.0",
+        "spatie/laravel-sluggable": "^2.2"
+    },
+    "require-dev": {
+        "facade/ignition": "^1.4",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^3.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "files": [
+            "app/Helpers/access.php",
+            "app/Helpers/db.php",
+            "app/Helpers/breadcrumbs.php",
+            "app/Helpers/filter.php",
+            "app/Helpers/interface.php",
+            "app/Helpers/routes.php",
+            "app/Helpers/str.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type":"vcs",
+            "url": "https://andrey_kosse@bitbucket.org/softartru/dump.git"
+        },
+        {
+            "type":"vcs",
+            "url": "https://andrey_kosse@bitbucket.org/softartru/sitemap.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}

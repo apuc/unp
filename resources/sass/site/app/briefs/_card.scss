@@ -1,0 +1,52 @@
+/**
+ *  Новости
+ *
+ */
+
+.briefs-card {
+  .card-body {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    min-height:    57px;
+
+    time {
+      margin-right: 10px;
+      text-align:   right;
+
+      .date {
+        display:   block;
+        font-size: 0.875em;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: $gray-900;
+
+      &:hover, &:focus {
+        color: $hover-color;
+      }
+    }
+  }
+
+  a.card-icon {
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: $gray-600;
+    white-space: nowrap;
+
+    .fa {
+      font-size: 1rem;
+      margin-right: 3px;
+    }
+  }
+
+  .badge {
+    margin-left: 0.5rem;
+  }
+}

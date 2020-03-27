@@ -1,0 +1,71 @@
+﻿// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700&subset=cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Racing+Sans+One);
+// Core variables and mixins
+@import "app/variable";
+@import "app/mixin";
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/owl.carousel/src/scss/owl.carousel";
+@import "node_modules/owl.carousel/src/scss/owl.theme.default";
+@import "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min";
+//@import "node_modules/custom-scrollbar/jquery.mCustomScrollbar";
+
+// Main Theme
+@import "app/form";
+@import "app/main";
+@import "app/header";
+@import "app/footer";
+@import "app/card";
+@import "app/benefit";
+@import "app/bulletin";
+@import "app/scroll-top";
+
+// Фильтр
+@import "app/filter/top";
+@import "app/filter/sidebar";
+
+// Личный кабинет
+@import "app/account/account";
+
+// Календарь
+@import "app/picker/date";
+
+// Акция букмекера
+@import "app/deal/card";
+
+// Букмекер
+@import "app/bookmaker/card";
+
+// Матч
+@import "app/match/match";
+@import "app/match/matches";
+
+// Новости
+@import "app/news/article";
+@import "app/briefs/card";
+
+// Пользователь
+@import "app/user/card";
+@import "app/user/detail";
+
+// Помощь
+@import "app/help/question";
+
+// Прогноз
+@import "app/forecast/card";
+@import "app/forecast/detail";
+
+// Статья
+@import "app/post/card";
+
+// Главная страница
+@import "app/home";
+@import "app/owl";
+@import "app/win";
+@import "app/siteset/gallery";
+@import "app/sitemap";
+
+// Страницы ошибок
+@import "app/error";

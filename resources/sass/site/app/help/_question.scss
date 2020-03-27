@@ -1,0 +1,51 @@
+/**
+ * Справка
+ *
+ */
+
+.questions-accordion {
+    .card {
+        border-radius: 7px !important;
+
+        .question {
+            p {
+                display:         block;
+                text-decoration: underline;
+                margin:          0;
+                padding:         1rem 2rem 1rem 1rem;
+                font-size:       1.286rem;
+                font-weight:     600;
+                cursor:          pointer;
+                position:        relative;
+
+                &[data-toggle="collapse"]:after {
+                    position:    absolute;
+                    right:       10px;
+                    top:         50%;
+                    margin-top:  -12px;
+                    content:     '\f106';
+                    display:     inline-block;
+                    font-family: FontAwesome;
+                    line-height: 1;
+                    font-size:   24px;
+                    font-weight: normal;
+                    width:       24px;
+                    height:      24px;
+                }
+
+                &[data-toggle="collapse"].collapsed:after {
+                    content: '\f107';
+                }
+            }
+        }
+    }
+
+    .card-body {
+        padding:   0 2rem 2rem;
+        font-size: 0.929rem;
+
+        p {
+            margin: 0;
+        }
+    }
+}

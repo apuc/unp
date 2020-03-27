@@ -1,0 +1,102 @@
+/**
+ *  Карусель
+ *
+ */
+
+.owl-theme {
+    .owl-nav {
+        margin:     0;
+        width:      100%;
+        position:   absolute;
+        top:        50%;
+        margin-top: -20px;
+
+        [class*="owl-"] {
+            margin:        0;
+            padding:       0;
+            width:         40px;
+            height:        40px;
+            text-align:    center;
+            background:    transparent;
+            border:        2px solid #ffcaa2;
+            border-radius: 50%;
+            color:         #ffcaa2;
+            font-size:     1.5rem;
+            transition:    all 0.25s ease-in-out;
+
+            &:hover {
+                background:   #ffaa75;
+                color:        $white;
+                border-color: #ffaa75;
+            }
+
+            .fa {
+                font-weight: bold;
+                position:    relative;
+            }
+        }
+
+        .owl-prev {
+            position: absolute;
+            left:     -50px;
+
+            .fa {
+                left: -1px;
+                top:  -1px;
+            }
+        }
+
+        .owl-next {
+            position: absolute;
+            right:    -50px;
+
+            .fa {
+                right: -1px;
+                top:   -1px;
+            }
+        }
+    }
+
+    .owl-nav.disabled + .owl-dots {
+        margin-top: 5px;
+    }
+
+    .owl-dots {
+        text-align: right;
+
+        .owl-dot {
+            span {
+                margin:     5px 5px;
+                background: $gray-300;
+            }
+
+            &.active,
+            &:hover {
+                span {
+                    background: #ffaa75;
+                }
+            }
+        }
+    }
+}
+
+.home-slider {
+    .owl-theme .owl-nav {
+        opacity:    0;
+        transition: opacity 400ms ease;
+
+        .owl-prev {
+            left: 20px;
+        }
+
+        .owl-next {
+            right: 20px;
+        }
+    }
+
+    &:hover {
+        .owl-nav {
+            opacity: 1;
+        }
+    }
+}

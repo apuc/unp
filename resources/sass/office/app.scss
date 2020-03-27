@@ -1,0 +1,21 @@
+﻿// Core variables and mixins
+@import "app/variable";
+
+// Bootstrap
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Main Theme
+@import "app/form";
+@import "app/main";
+@import "app/header";
+@import "app/content";
+@import "app/nav-menu";
+@import "app/dashboart";
+@import "app/customer";
+@import "app/win";
+@import "app/mobile";
+@import "app/search";
+@import "app/spin";
+@import "app/siteset.gallery";

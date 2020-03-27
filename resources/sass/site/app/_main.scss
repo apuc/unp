@@ -1,0 +1,343 @@
+/**
+ *  Макет и отдельные элементы
+ *
+ */
+
+html {
+    min-height: 100%;
+    font-size:  14px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    background-color: $dark; 
+}
+
+h1 {
+    margin:      1.5rem 0 1.5rem;
+    font-weight: 600;
+    text-align:  center;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.5rem;
+    }
+}
+
+h2, h3, h4 {
+    margin-top:  1rem;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+p + ul {
+    margin-top: -0.5rem;
+}
+
+b {
+    font-weight: 600;
+}
+
+:focus, a:focus, button:focus {
+    outline:        none;
+    outline-offset: 0;
+}
+
+a.btn {
+    text-decoration: none;
+}
+
+a.dotted, a.dotted:hover, .dotted {
+    border-bottom:   1px dotted;
+    text-decoration: none;
+    cursor:          pointer;
+}
+
+.dashed {
+    border-bottom: 1px dashed;
+    cursor:        pointer;
+}
+
+.extra-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.table {
+    th {
+        font-weight: 600;
+        border-top:  0;
+    }
+}
+
+.table-sm {
+    font-size: 0.929rem;
+}
+
+.text-sm {
+    font-size: 0.929rem;
+}
+
+//
+.wrap-container {
+    position:       relative;
+    display:        flex;
+    flex-direction: column;
+    height:         100%;
+    z-index:        2;
+
+    &.container {
+        padding-right: 0;
+        padding-left:  0;
+    }
+}
+
+.page-content {
+    background:    $white;
+    padding-left:  10px;
+    padding-right: 10px;
+}
+
+.title {
+    min-height:     43px;
+    padding:        9px 0 8px;
+    text-transform: uppercase;
+    font-size:      1.286rem;
+    font-weight:    600;
+    text-align:     center;
+    border-bottom:  3px solid $gray-300;
+    margin:         0 -10px 10px;
+
+    span {
+        font-size: 1.143rem;
+        color:     $gray-500;
+    }
+}
+
+.sidebar {
+    @extend .col-12;
+    @extend .col-lg-3;
+    @extend .order-1;
+
+    @include media-breakpoint-up(lg) {
+        padding-right: 0;
+        min-width:     310px;
+        width:         310px;
+    }
+}
+
+.content {
+    @extend .col;
+    @extend .order-2;
+
+    @include media-breakpoint-up(lg) {
+        width: calc(100% - 310px);
+    }
+}
+
+// хлебные крошки
+.breadcrumb {
+    padding:         1.5rem 10px 0;
+    justify-content: center;
+    @include hover-color;
+
+    + h1 {
+      margin-top: 0.75rem;
+    }
+}
+
+// текст
+.text-top {
+    padding: 1.5rem 10px 20px;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    &__btn {
+        @extend .col-12;
+        @extend .col-lg-3;
+        text-align: center;
+        align-self: flex-end;
+
+        @include media-breakpoint-up(lg) {
+            min-width:     310px;
+            width:         310px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.text-bottom {
+    padding: 1rem 10px;
+}
+
+.breadcrumb + .text-top, h1 + .text-top {
+    padding-top: 0;
+}
+
+// статьи
+.article {
+    padding: 0.75rem 1rem;
+
+    h3 {
+        font-size:   1.286rem;
+        font-weight: 600;
+        margin:      0 0 1rem;
+    }
+
+    @include hover-color;
+
+    time {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .media {
+        flex-direction: column;
+    }
+}
+
+time {
+    font-size: 0.875rem;
+    color:     $gray-700;
+}
+
+.article-detail {
+    @include card-box-shadow;
+    @include card-border-radius;
+    margin-bottom: 20px;
+    padding:       1rem;
+
+    time {
+        display:       block;
+        font-size:     1rem;
+        color:         $gray-900;
+        font-weight:   600;
+        margin-bottom: 1rem;
+    }
+
+    .figure {
+        width:        25%;
+        margin-right: 1.5rem;
+        float:        left;
+
+        @media (max-width: 380px) {
+            width:        100%;
+            margin-right: 0;
+            float:        none;
+        }
+    }
+}
+
+.figure-caption {
+    margin-top: 0.5rem;
+}
+
+// mix
+.list-li {
+    margin:     0 0 10px;
+    padding:    0;
+    list-style: none;
+
+    li {
+        position:      relative;
+        padding-left:  15px;
+        margin-bottom: 10px;
+
+        &:before {
+            display:  block;
+            color:    inherit;
+            content:  "\2013";
+            position: absolute;
+            left:     0;
+            top:      0;
+            z-index:  1;
+            width:    15px;
+        }
+    }
+}
+
+.red {
+    color: $red;
+}
+
+.submenu {
+    list-style: none;
+    margin:     0 0 10px;
+    padding:    0;
+    position:   relative;
+
+    li {
+        line-height: 1.3;
+
+        a {
+            display:        block;
+            font-size:      0.857rem;
+            color:          $gray-900;
+            text-transform: uppercase;
+            padding:        0.75rem 1rem;
+            background:     $gray-100;
+            border-bottom:  1px solid $white;
+
+            &:hover, &:focus {
+                color: $hover-color;
+            }
+
+            &.active {
+                font-weight: 600;
+            }
+        }
+    }
+
+    ul {
+        list-style:   none;
+        margin:       0;
+        padding-left: 1rem;
+        background:   $gray-300;
+
+        li {
+            a {
+                font-size:      0.929rem;
+                text-transform: none;
+                background:     $gray-200;
+            }
+        }
+    }
+}
+
+.policy-error {
+    display: none;
+}
+
+.legal-document {
+  padding: 1rem;
+
+  h3 {
+    margin-top: 0;
+
+    a {
+      color: $gray-900;
+
+      &:hover, &:focus {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+// пробелы в разрядах чисел
+.hs {
+  // Полупробел для разделения разрядов чисел: 10<span class="hs"></span>000
+  margin-left: .2em;
+}
+
+.rhs {
+  // Полупробел на случай, если реальный пробел важен, например между ценой и валютой: 1<span class="rhs">&nbsp;</span>$
+  font-size: 50%;
+  line-height: 1;
+}

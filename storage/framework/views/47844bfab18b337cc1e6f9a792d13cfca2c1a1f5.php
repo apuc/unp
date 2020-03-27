@@ -1,0 +1,1 @@
+<a class="btn btn-light" href="<?php echo e($url); ?>"><i class="fa fa-arrow-left"></i></a><?php /**PATH /var/www/sportliga/site/sportliga.com/resources/views/control/office/toolbar/back.blade.php ENDPATH**/ ?>

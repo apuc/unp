@@ -1,0 +1,58 @@
+/**
+ * Детализация пользователя
+ *
+ */
+
+.user-detail {
+    h2 {
+        text-align: center;
+        margin:     0 0 1rem;
+    }
+
+    .user-detail-top {
+        font-size:     0.929rem;
+        margin-bottom: 10px;
+    }
+
+    .user-detail-avatar {
+        display:       inline-block;
+        border-radius: 50%;
+        width:         100px;
+        height:        100px;
+        overflow:      hidden;
+
+        img {
+        	margin:			0;
+            height:         100px;
+            width:          100%;
+            object-fit:     cover;
+            vertical-align: top;
+        }
+    }
+
+    .user-detail-info {
+        width:       90%;
+        margin:      0 auto 10px;
+        padding:     0.5rem;
+        font-weight: 600;
+        background:  $gray-100;
+
+        b {
+            font-size: 18px;
+        }
+    }
+
+    .card-text p:first-child {
+        margin-top: 0.5rem;
+    }
+}
+
+.user-detail-finance {
+    .nav {
+        display: inline-flex;
+    }
+
+    .btn-group > .btn {
+        flex: 0 1 auto;
+    }
+}

@@ -1,0 +1,229 @@
+﻿/**
+ *  Подвал
+ *
+ */
+
+footer {
+    margin-top:       auto;
+    font-size:        0.875rem;
+    color:            $gray-300;
+    background-color: $gray-900;
+
+    .footer {
+        padding: 1rem 20px 5px;
+    }
+
+    a {
+        color:      $gray-200;
+        transition: all .25s ease;
+
+        &:hover, &:focus, &.active {
+            color:           $hover-color;
+            text-decoration: none;
+        }
+    }
+
+    hr {
+        border-top: 1px solid $gray-700;
+    }
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+}
+
+.footer-logo {
+    font-family:    "Racing Sans One", cursive;
+    text-transform: uppercase;
+    font-size:      1.25rem;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+    }
+}
+
+.footer-nav {
+    margin-left:   -1rem;
+    margin-bottom: 1rem;
+
+    .nav-link {
+        font-size:      0.929rem;
+        text-transform: uppercase;
+        padding:        0.25rem 1rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.footer-list {
+    list-style: none;
+    margin:     1rem 0 0;
+    padding:    0;
+    font-size:  1rem;
+
+    li {
+    	display: inline-block;
+        margin-right: 20px;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.fcontacts {
+    display:        flex;
+    flex-direction: column;
+}
+
+.fphone {
+    font-size: 1.25rem;
+}
+
+.footer-social {
+    @include clearfix;
+    margin-top:    auto;
+    margin-bottom: 3px;
+
+    a {
+        display:       inline-block;
+        margin-right:  0.75rem;
+        background:    $gray-500;
+        color:         $white;
+        font-size:     1.25rem;
+        line-height:   30px;
+        color:         $white;
+        border-radius: 50%;
+        width:         30px;
+        height:        30px;
+        text-align:    center;
+
+        &:hover, &:focus {
+            color:      $white;
+            background: $hover-color;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+    }
+}
+
+.copy-dev {
+    display:      block;
+    padding-left: 31px;
+
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+    }
+}
+
+.r-logo {
+    margin-top: 0.25rem;
+    width:      90px;
+    height:     30px;
+    background: url(/images/f-logo-rationallab.png) 0 0 no-repeat;
+    transition: none;
+
+    &:hover {
+        background-position: 0 -30px;
+    }
+}
+
+.copy {
+    display:      inline-block;
+    text-align:   left;
+    position:     relative;
+    padding-left: 31px;
+
+    .copy-icon {
+        position:  absolute;
+        font-size: 30px;
+        left:      0;
+        top:       11px;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.info-18 {
+    display:      inline-block;
+    text-align:   left;
+    position:     relative;
+    padding-left: 36px;
+
+    &:before {
+        content:    '';
+        display:    block;
+        position:   absolute;
+        width:      30px;
+        height:     30px;
+        bottom:     5px;
+        left:       0;
+        background: url(/images/ic-18.png) no-repeat;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+        text-align:   center;
+    }
+}
+
+.fdoc {
+    display:      inline-block;
+    text-align:   left;
+    position:     relative;
+    padding-left: 36px;
+
+    @include media-breakpoint-down(md) {
+        padding-left:  0;
+        text-align:    center;
+        margin-bottom: 0;
+    }
+
+    &:before {
+        content:    '';
+        display:    block;
+        position:   absolute;
+        width:      30px;
+        height:     30px;
+        bottom:     5px;
+        left:       0;
+        background: url(/images/ic-sv.png) no-repeat;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+}
+
+.ftext {
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.heraldry {
+	position: relative;
+	margin-top: -6px;
+
+	@include media-breakpoint-down(md) {
+	  margin: 0.5rem 0;
+	}
+}

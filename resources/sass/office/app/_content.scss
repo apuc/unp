@@ -1,0 +1,219 @@
+﻿//
+//  Контент
+//
+
+// box
+.box {
+  background: $white;
+  border: 1px solid $border-color;
+  margin-bottom: 0.714rem;
+}
+
+.box-header {
+  padding: 10px;
+  border-bottom: 1px solid $border-color;
+
+  > h2 {
+    margin-top: 0;
+  }
+
+  > h3 {
+    margin-top: 0;
+  }
+}
+
+.box-footer {
+  padding: 10px;
+  border-top: 1px solid $border-color;
+}
+
+.box-body {
+  padding: 10px;
+
+  > h2 {
+    margin-top: 0;
+  }
+
+  > h3 {
+    margin-top: 0;
+  }
+}
+
+.box-header + .box-body {
+  padding-top: 0;
+}
+
+// tabs
+.nav-tabs-custom .nav-tabs {
+  border-bottom: 1px solid $border-color;
+
+  .nav-link {
+    font-size: 1.071rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+
+    &.active:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 4px;
+      background: theme-color("primary");
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.tab-content .btn-group a span {
+  margin-left: 5px;
+}
+
+// таблица
+.table .text-edit {
+  text-align: right;
+  white-space: nowrap;
+
+  .btn {
+    vertical-align: top;
+    cursor: pointer;
+
+    + .btn {
+      margin-left: 3px;
+    }
+  }
+}
+
+.table .table {
+  background-color: transparent;
+
+  > thead,
+  > tbody {
+    > tr:first-child > th {
+      border-color: transparent;
+    }
+  }
+
+  .no-border {
+    margin: 0 0 5px -2px;
+  }
+
+  h4 {
+    margin: 0.714rem 0 0.286rem;
+    font-weight: 600;
+    color: $gray;
+    font-size: 1rem;
+  }
+}
+
+// таблица детализации
+.doc-detail b {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+// фильтр
+.horizontal-filter-box {
+  position: relative;
+  top: 10px;
+  text-align: center;
+
+  .btn {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .fa {
+    margin-left: 5px;
+  }
+}
+
+.filter-box {
+  padding: 22px 10px 10px;
+  background: $border-color;
+}
+
+.btn-filter {
+  background: $border-color;
+  border-color: $border-color;
+  color: $gray-darker;
+}
+
+// поездки
+.panel-passengers {
+  margin-bottom: 0;
+
+  .panel {
+    border-radius: 0;
+    @include box-shadow(none);
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    + .panel {
+      margin-top: 0;
+    }
+
+    .panel-heading {
+      border-radius: 0;
+      padding: 5px 15px;
+
+      a {
+        display: block;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+
+      + .panel-collapse > .panel-body {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .panel-collapse > .panel-body {
+    padding: 0 15px 10px;
+  }
+
+  .nav > li > a {
+    padding: 5px 15px;
+  }
+
+  .tab-pane.active {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    text-decoration: none;
+  }
+
+  .table > tbody > tr > th {
+    border-top: 1px solid transparent;
+    padding: 4px 10px;
+  }
+  .table > tbody > tr > td {
+    padding: 4px 10px;
+  }
+}
+
+// алерт
+.alert-notifications {
+  font-size: 140%;
+  text-align: center;
+  /*margin-top: 29px;*/
+
+  .close {
+    font-size: 140%;
+  }
+
+  .content {
+    display: inline-block;
+  }
+}

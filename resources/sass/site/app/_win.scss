@@ -1,0 +1,450 @@
+﻿/**
+ * Окна
+ *
+ */
+
+.win {
+    display:       none;
+    width:         338px;
+    max-height:    calc(100vh - 52px);
+    overflow-x:    hidden;
+    overflow-y:    auto;
+    position:      absolute;
+    border:        none;
+    border-radius: 0;
+    margin:        0;
+    padding:       0;
+    border-top:    2px solid $hover-color;
+    right:         0;
+    box-shadow:    0 5px 20px rgba(0, 0, 0, .2);
+    background:    $gray-800;
+    color:         $white;
+    font-size:     13px;
+    top:           100%;
+    z-index:       1060;
+
+    @media (max-width: 380px) {
+        width: 100%;
+    }
+
+    .post {
+        display: flex;
+        padding: 0.5rem 0;
+        color:   $white;
+
+        p {
+            margin: 0;
+        }
+
+        time {
+            margin-right: 1rem;
+            margin-top:   2px;
+            color:        $gray-200;
+        }
+
+        .post-text {
+            flex: 1;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        a {
+            color: $white;
+
+            &:hover, &:focus {
+                color: $hover-color;
+            }
+        }
+
+        &-status-draw {
+          color: $yellow;
+        }
+
+        &-status-win {
+          color: $green;
+        }
+
+        &-status-checking {
+          color: $yellow;
+        }
+
+        &-status-declined {
+          color: $brown;
+        }
+
+        &-status-cancelled {
+          color: $gray;
+        }
+
+        &-status-confirmed {
+          color: $greenyellow;
+        }
+
+        &-status-lose {
+          color: $red;
+        }
+
+        &-status-draft {
+          color: $lightgray;
+        }
+    }
+
+    .post-btns {
+        text-align:  center;
+        padding-top: 1rem;
+    }
+}
+
+.win-cont {
+    padding: 20px 10px 10px;
+}
+
+// уведомления
+.win-notices {
+    left: auto;
+}
+
+.win-bank {
+    left: auto;
+
+    .post-date {
+        margin-right: 1rem;
+    }
+
+    .val {
+        margin-top:  1rem;
+        text-align:  right;
+        font-weight: 600;
+
+        &-minus {
+            color: $red;
+        }
+
+        &-plus {
+            color: $green;
+        }
+    }
+}
+
+// вып. меню личный кабинет
+.win-account {
+    left: auto;
+
+    .win-cont {
+        padding: 1rem 0;
+
+        h3 {
+            margin:         0 20px 1rem 20px;
+            text-transform: uppercase;
+            font-weight:    500;
+        }
+    }
+
+    .win-account-name {
+        padding:       0 20px;
+        margin-bottom: 10px;
+
+        .user-img {
+            width:        48px;
+            height:       48px;
+            line-height:  48px;
+            background:   $gray-700;
+            color:        $white;
+            margin-right: 10px;
+
+            img {
+                vertical-align: top;
+                width:          48px;
+                height:         48px;
+            }
+        }
+
+        .win-user-name {
+            font-size: 0.929rem;
+
+            a {
+                color: $white;
+
+                &:hover, &:focus, &.active {
+                    color: $hover-color;
+                }
+            }
+        }
+
+        h4 {
+            margin:      0;
+            font-weight: 500;
+            font-size:   1.143rem;
+        }
+    }
+
+    .win-account-bank {
+        margin:      0 20px 10px;
+        font-weight: 500;
+        font-size:   1.143rem;
+
+        a {
+            color: $white;
+
+            &:hover, &:focus, &.active {
+                color: $hover-color;
+            }
+        }
+    }
+
+    .navi {
+        line-height:  1.3;
+        list-style:   none;
+        padding-left: 0;
+        margin:       0;
+
+        li {
+            padding:         0.25rem 20px;
+            display:         flex;
+            align-items:     center;
+            justify-content: space-between;
+
+            &.dropdown-divider {
+                border-color: $gray-700;
+                padding:      0;
+            }
+
+            @include media-breakpoint-down(xs) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .badge {
+            border-radius:   50%;
+            width:           24px;
+            height:          24px;
+            display:         flex;
+            align-items:     center;
+            justify-content: center;
+        }
+
+        .bagde-gray {
+            //color: $gray-500;
+            font-size: 12px;
+            display: inline-block;
+        }
+
+        .nav-link {
+            display:        inline-block;
+            text-transform: uppercase;
+            font-size:      0.875rem;
+            color:          $white;
+            padding:        0.35rem 0;
+
+            &:hover, &:focus, &.active {
+                color: $hover-color;
+            }
+        }
+
+        .btn {
+            margin-right: 8px;
+            margin-left: auto;
+            display: inline-block;
+        }
+    }
+}
+
+// модальное окно навигация
+.modal-content button.close {
+    display:    block;
+    background: url(/images/win-close-black.png) no-repeat;
+    width:      14px;
+    height:     14px;
+    top:        13px;
+    right:      13px;
+    opacity:    1;
+    position:   absolute;
+    z-index:    100;
+    cursor:     pointer;
+}
+
+.modal-content {
+    border-radius: 0;
+    background:    $white;
+}
+
+.win-nav {
+    display:       none;
+    width:         100%;
+    max-height:    calc(100vh - 52px);
+    overflow-x:    hidden;
+    overflow-y:    auto;
+    position:      absolute;
+    border:        none;
+    border-radius: 0;
+    margin:        0;
+    padding:       0;
+    border-top:    2px solid $hover-color;
+    right:         0;
+    min-width:     210px !important;
+    box-shadow:    0 5px 20px rgba(0, 0, 0, .2);
+    background:    $gray-800;
+    top:           100%;
+    z-index:       1060;
+
+    .win-cont {
+        padding: 20px 20px 20px 62px;
+
+        @include media-breakpoint-down(md) {
+            padding-left: 30px;
+        }
+    }
+}
+
+.win-nav ul {
+    list-style:  none;
+    margin:      0;
+    padding:     0;
+    line-height: 1.3;
+
+    .nav-item {
+        text-align: left;
+
+        a {
+            display: block;
+            padding: 7px 0;
+        }
+    }
+
+    .link {
+        text-transform: uppercase;
+        font-size:      0.875rem;
+    }
+
+    a {
+        color: $white;
+
+        &:hover, &:focus, &.active {
+            color: $hover-color;
+        }
+    }
+
+    ul {
+        margin: 0 0 0 20px;
+
+        a, .nav-item a {
+            padding: 5px 0;
+        }
+    }
+}
+
+// Регистрация
+.win-registration {
+    @include media-breakpoint-up(sm) {
+        margin-top: 3.714rem;
+    }
+
+    .modal-content {
+        text-align: center;
+    }
+
+    .modal-body {
+        padding-bottom: 2rem;
+
+        @include hover-color;
+    }
+
+    h4 {
+        text-align:  center;
+        margin:      0 0 0.75rem;
+        font-size:   24px;
+        font-weight: 600;
+    }
+
+    .text-big {
+        font-size: 18px;
+        margin:    0 0 0.5rem;
+    }
+
+    .text-link {
+        font-size: 18px;
+
+        @include hover-color;
+    }
+
+    .modal-social {
+        display:         flex;
+        justify-content: center;
+        margin-bottom:   10px;
+
+        a {
+            display:         flex;
+            justify-content: center;
+            align-items:     center;
+            width:           80px;
+            height:          80px;
+            margin-right:    2px;
+            background:      $gray-100;
+            text-decoration: none;
+            color:           $gray-900;
+
+            &:hover {
+                color: $hover-color;
+            }
+
+            .fa {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .m-input {
+        width:         300px;
+        margin:        0 auto;
+        padding-left:  20px;
+        padding-right: 20px;
+
+        @include media-breakpoint-down(xs) {
+          width: 260px;
+        }
+    }
+
+    .custom-control {
+        margin-top: 10px;
+
+        .custom-control-label {
+            font-weight: normal;
+        }
+    }
+
+    .btn {
+        padding-right: 20px;
+        padding-left:  20px;
+    }
+
+    form {
+        display: inline-block;
+    }
+
+    .form-item {
+        position: relative;
+
+        label {
+            background:  #fff;
+            color:       #666;
+            display:     none;
+            font-size:   14px;
+            left:        10px;
+            padding:     0 10px;
+            position:    absolute;
+            top:         -10px;
+            font-weight: normal;
+
+            &.active {
+                display: inline-block;
+            }
+        }
+
+        + .form-item {
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,297 @@
+﻿/**
+ *  Главная страница
+ *
+ */
+
+// статьи, новости
+.home-postings {
+  margin-bottom: 20px;
+  margin-top:    10px;
+
+  .card-wrap {
+    height:        100%;
+    margin-bottom: 0;
+  }
+
+  .card-image-top {
+    img {
+      height: 300px;
+    }
+  }
+}
+
+.home-briefs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.news-list {
+  display:        flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+
+  &__item {
+    display:       flex;
+    align-items:   center;
+    margin-bottom: 10px;
+    background:    $white;
+    padding:       0.5rem 1rem;
+    min-height:    57px;
+    @include card-box-shadow;
+    @include card-border-radius;
+
+    time {
+      margin-right: 10px;
+      text-align:   right;
+
+      .date {
+        display:   block;
+        font-size: 0.875em;
+      }
+    }
+
+    p {
+      flex:   1;
+      margin: 0;
+    }
+
+    a {
+      color: $gray-900;
+
+      &:hover, &:focus {
+        color: $hover-color;
+      }
+    }
+  }
+
+  .card-icon {
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: $gray-600;
+    white-space: nowrap;
+
+    .fa {
+      font-size: 1rem;
+      margin-right: 3px;
+    }
+  }
+
+  .badge {
+    margin-left: 0.5rem;
+  }
+}
+
+.sport-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+// новые прогнозы
+.home-forecasts {
+  margin-bottom: 20px;
+
+  .card-wrap {
+    height:        100%;
+    margin-bottom: 0;
+  }
+
+  .cards_tile {
+    display: none;
+  }
+
+  .user-cards_list {
+    display: block;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+
+    .card-wrap {
+      height:        auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .cards_tile {
+      display: block;
+    }
+
+    .cards_list, .user-cards_list {
+      display: none;
+    }
+  }
+}
+
+// лучшие капперы
+.user-card {
+  .user-profit {
+    margin-top:  5px;
+    text-align:  right;
+    font-weight: 600;
+
+    b {
+      font-weight: 600;
+      font-size:   1.286rem;
+      display:     inline-block;
+      min-width:   80px;
+    }
+  }
+}
+
+// лучшие букмекеры
+.home-bookmakers {
+  margin-bottom: 20px;
+
+  .card-wrap {
+    height:        100%;
+    margin-bottom: 0;
+  }
+
+  .cards_tile {
+    display: none;
+  }
+
+  .user_list {
+    display: block;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+
+    .card-wrap {
+      height:        auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .cards_tile {
+      display: block;
+    }
+
+    .cards_list {
+      display: none;
+    }
+  }
+}
+
+// лучшие акции
+.home-deals {
+  .cards_tile {
+    display: block;
+  }
+
+  .cards_list {
+    display: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    .cards_tile {
+      display: none;
+    }
+
+    .cards_list {
+      display: block;
+    }
+  }
+
+  .deals-card {
+    &__image {
+      img {
+        height: 143.5px;
+      }
+    }
+  }
+}
+
+// события сегодня
+.home-events {
+  margin-bottom: 20px;
+
+  .card-wrap {
+    height:        100%;
+    margin-bottom: 0;
+  }
+
+  .cards_tile {
+    display: none;
+  }
+
+  .user_list {
+    display: block;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+
+    .card-wrap {
+      height:        auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .cards_tile {
+      display: block;
+    }
+
+    .cards_list {
+      display: none;
+    }
+  }
+}
+
+// турниры сегодня
+.tournament-card {
+  h5 {
+    font-size:      1rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    margin:         0;
+    padding:        0.5rem 0;
+    @include hover-color;
+  }
+
+  .sport-icon {
+    margin-right: 5px;
+  }
+
+  ul {
+    list-style: none;
+    margin:     0;
+    padding:    0 0 10px;
+    line-height: 1.3;
+    font-size: 0.938rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 5px;
+      padding-left: 28px;
+      min-height: 34px;
+
+      @include hover-color;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  .b-matches__tournament-flag {
+    line-height: 0;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+  }
+}

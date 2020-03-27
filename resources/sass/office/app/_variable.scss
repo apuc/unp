@@ -1,0 +1,63 @@
+﻿
+// Colors
+$gray-darker: #1F2C33;
+$gray-dark: #3b3c42;
+
+$gray: #6D7F8A;
+$gray-lighter: #f0f0f5; 
+$gray-lighterst: #FEFEFE; 
+
+$blue: #337ab7;
+$border-color: #DFE4E7;
+
+$gray-100: #e9ecef;
+
+//theme-color("primary")
+// Options
+$enable-shadows: true;
+
+// Scaffolding
+$body-bg: #EBEEF0;
+$link-decoration: underline;
+
+// Typography
+$h1-font-size: 1.643rem;
+$h2-font-size: 1.429rem;
+$h3-font-size: 1.286rem;
+$h4-font-size: 1.071rem;
+
+$headings-line-height: 1.2;
+
+// Table
+$table-cell-padding: 0.286rem;
+$table-border-color: $border-color;
+$table-hover-bg: $gray-lighter;
+
+// Forms
+$border-radius: 0.2rem;
+
+$input-box-shadow: none;
+$input-border-radius: 0;
+$input-focus-border-color: #ACBBC2;
+
+// Buttons
+$input-btn-padding-y: .25rem;
+$input-btn-padding-x: .75rem;
+$input-btn-line-height: 1.5;
+
+$input-btn-padding-y-sm: .15rem;
+$input-btn-padding-x-sm: .5rem;
+$input-btn-line-height-sm: 1.5;
+
+// Grid
+$grid-gutter-width: 10px;
+
+// Breadcrumb
+$breadcrumb-bg: transparent;                 
+
+// Tabs
+$nav-tabs-border-color: transparent;
+$nav-tabs-border-width: 0;
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-active-color: $gray-darker;
+$nav-tabs-link-active-bg: transparent;

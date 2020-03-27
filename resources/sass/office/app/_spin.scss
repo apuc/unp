@@ -1,0 +1,16 @@
+.ss-spin-z-index {
+    z-index: 2000;
+}
+
+.ss-spin-gif {
+    width: 64px;
+    height: 64px;
+    background: transparent url("/images/siteset-spin.gif") 0 0 no-repeat;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+    z-index: 2020;
+}
+

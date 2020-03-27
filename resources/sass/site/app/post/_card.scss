@@ -1,0 +1,67 @@
+/**
+ *  Новости
+ *
+ */
+
+.news-card {
+    .card-body {
+        padding: 0.75rem 1rem 1rem;
+
+        h3 {
+            font-size:   1.286rem;
+            margin:      0.75rem 0 0;
+            font-weight: 600;
+            @include hover-color;
+        }
+    }
+}
+
+.cards_tile .news-card {
+    .card-text {
+        display: none;
+    }
+}
+
+.cards_list .news-card {
+    .card-image-top {
+        width:        200px;
+        float:        left;
+        margin-right: 1rem;
+        position:     relative;
+        overflow:     hidden;
+
+        img {
+            height: 150px;
+        }
+    }
+}
+
+// отдельно карточка - список
+.news-card_list {
+    .card-body {
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    .card-image-top {
+        width:        200px;
+        float:        left;
+        margin-right: 1rem;
+        position:     relative;
+        overflow:     hidden;
+
+        img {
+            height: 150px;
+        }
+    }
+}
+
+.share-with {
+    text-align: center;
+    font-size:  0.929rem;
+
+    p {
+        margin-bottom: 3px;
+    }
+}

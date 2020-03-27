@@ -1,0 +1,257 @@
+/**
+ * Верхний фильтр
+ *
+ */
+
+.b-filter-top {
+  // Навигатор спорта
+  &__sport-nav {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__sport-main-list {
+    display:       flex;
+    padding-left:  0;
+    margin-bottom: 0;
+    list-style:    none;
+    position:      relative;
+    width: 100%;
+    border-bottom: 4px solid $dark;
+  }
+
+  &__sport-main-item {
+    text-align:    center;
+    position:      relative;
+
+    .nav-link {
+      display:         block;
+      padding:         0.375rem 1rem;
+      height: 		   32px;
+      border-top:      1px solid $gray-300;
+      border-right:    1px solid $gray-300;
+      color:           $gray-900;
+      text-decoration: none;
+      transition:      transform .2s ease;
+
+      @include media-breakpoint-down(xs) {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+      }
+
+      &:hover, &:focus, &.active {
+        background:      $dark;
+        border-color:    $dark;
+        color:           $white;
+        text-decoration: none;
+      }
+    }
+
+    &:first-child {
+      .nav-link {
+        border-left: 1px solid $gray-300;
+
+        &:hover, &:focus, &.active {
+          border-color:  $dark;
+        }
+      }
+    }
+  }
+
+  // прочие
+  // окно
+  &__sport-other-pulldown {
+    &.win-nav {
+      .win-cont {
+        padding: 20px 20px 20px 30px;
+      }
+
+      ul {
+        columns: 3;
+
+        .nav-item {
+          a {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  &__sport-other-button {
+    position: static;
+
+    .dropdown-toggle::after {
+      position: relative;
+      top:      1px;
+    }
+
+    &:hover {
+      .b-filter-top__sport-other-pulldown {
+        display: block;
+      }
+
+      .nav-link {
+        &, &:focus, &.active {
+          background:      $dark;
+          border-color:    $dark;
+          color:           $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // календарь
+  &__calendar {
+    border-bottom: 4px solid $dark;
+
+    @include media-breakpoint-down(sm) {
+      border-bottom: 0;
+    }
+  }
+}
+
+// календарь
+.b-calendar {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  &__date-picker {
+    position: relative;
+
+    &.show {
+      .b-calendar__button {
+        background: $gray-500;
+
+        @include media-breakpoint-down(sm) {
+          background: $gray-400;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__nav {
+    height: 32px;
+    width: 26px;
+  }
+
+  &__nav-prev,
+  &__nav-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray-300;
+    height: 32px;
+    width: 26px;
+    cursor: pointer;
+
+    &:hover {
+      background: $gray-400;
+    }
+
+    &:after {
+      display: inline-block;
+      font-family: FontAwesome;
+      line-height: 1;
+      font-size:   18px;
+      font-weight: 400;
+    }
+  }
+
+  &__nav-prev {
+    &:after {
+      content: '\f104';
+    }
+  }
+
+  &__nav-next {
+    &:after {
+      content: '\f105';
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    background: $dark;
+    color: $white;
+    font-size: 0.857rem;
+    font-weight: 600;
+    height: 32px;
+    padding: 0 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: $gray-500;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      justify-content: center;
+      background: $gray-300;
+      color: $gray-800;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background: $gray-400;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    background-image: url(/images/icons.svg);
+    background-repeat: no-repeat;
+    background-position: -120px 0px;
+    width: 16px;
+    height: 15px;
+    transform: scale(1.1);
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
+
+    @include media-breakpoint-down(sm) {
+      background-position: -120px -30px;
+    }
+  }
+}
+.b-calendar-dates {
+  top: 100%;
+  width: 100%;
+  border-radius: 0;
+  border: 0;
+  min-width: auto;
+  padding: 0;
+  margin: 0;
+
+  .day {
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.857rem;
+    text-align: center;
+    border-bottom: 1px solid $gray-300;
+    cursor: pointer;
+
+    &:hover {
+      background: $gray-200;
+    }
+
+    &.active {
+      color: $white;
+      background: $hover-color;
+      font-weight: 600;
+    }
+  }
+}

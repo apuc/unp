@@ -1,0 +1,220 @@
+/**
+ * Карточка прогноза
+ *
+ */
+
+.forecast-card {
+    .card-body {
+    	text-align: center;
+
+        time {
+            font-size: 1rem;
+        }
+    }
+
+    .card-subtitle {
+    	a {
+    		color: $gray-900;
+
+    		&:hover, &:focus {
+    			color: $hover-color;
+    		}
+    	}
+    }
+
+    &__participants {
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	margin: 1rem 0 0.5rem;
+	}
+
+	&__participant {
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+		text-decoration: none;
+		color: $gray-900;
+    	flex: 1;
+
+    	h4 {
+			font-size: 1rem;
+			font-weight: 600;
+			line-height: 1.2;
+			margin: 0;
+    	}
+
+    	&:hover {
+    	  	text-decoration: $hover-color;
+    	}
+
+		img {
+			height: 30px;
+			width: auto;
+			margin: 0 0.5rem;
+		}
+	}
+
+	&__score {
+		background-color: rgba(0, 0, 0, 0.03);
+		min-width: 50px;
+
+		&-1, &-2 {
+		  font-size: 1.143rem;
+		  font-weight: 600;
+		}
+	}
+
+    &__val {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem 0;
+        line-height: 1.2;
+
+        a {
+            color: $gray-900;
+        }
+
+        .sm {
+            font-size: 0.929rem;
+            padding: 0 0.5rem;
+            color: $gray-600;
+        }
+
+        .bold {
+        	font-weight: 600;
+        	font-size: 1rem;
+            padding: 0 0.5rem;
+        }
+
+        .odds {
+        	padding: 0 0.5rem;
+        }
+
+        .bookmaker {
+        	margin: 0 0.5rem;
+        	align-self: center;
+
+        	img {
+            	height: 26px;
+			}
+        }
+
+        .result {
+        	font-weight: 600;
+        	font-size: 1rem;
+            padding: 0 0.5rem;
+        }
+    }
+
+    .forecast-btn {
+        text-align: center;
+        margin-top: 10px;
+
+        .btn-more {
+        	background-color: $gray-400;
+
+        	&:hover, &:focus {
+        		background: $hover-color;
+        		color: $white !important;
+        	}
+        }
+    }
+
+    .badge {
+    	font-size: 1rem;
+    	font-weight: 600;
+    }
+
+    &--win {
+    	background-color: rgba(212, 237, 218, 0.5);
+
+      	.result {
+      		color: $green;
+      	}
+    }
+
+    &--lose {
+      	background-color: rgba(248, 215, 218, 0.5);
+
+      	.result {
+      		color: $red;
+      	}
+    }
+
+    &--draw {
+      	background-color: #FDFFDB;
+    }
+}
+
+.cards_tile {
+    .forecast-card {
+        .card-subtitle {
+            font-size: 0.929rem;
+        }
+
+        &__val {
+            flex-direction: column;
+
+            .sm, .bold {
+                padding: 3px 0 0 0;
+            }
+
+            .rate {
+            	padding: 1rem 0 0;
+            }
+
+            .bookmaker {
+                margin: 0.5rem 0 0;
+            }
+
+            .odds {
+            	padding: 0.5rem 0 0;	
+            }
+
+            .result {
+            	padding: 0.5rem 0 0;	
+            }
+
+            .prognosis {
+        		min-height: 35px;
+        	}
+
+        }
+
+        .card-footer .btn {
+            display: none;
+        }
+
+    	&__participants {
+    		min-height: 69px;
+    	}
+
+        &__participant {
+        	flex-direction: column;
+
+        	&:first-child {
+        		h4 {
+        			order: 2;
+        		}
+
+        		img {
+        			order: 1;
+        		}
+        	}
+
+        	img {
+        		margin: 0 0 0.5rem;
+        	}
+        }
+    }
+}
+
+.cards_list {
+    .forecast-card {
+        .forecast-btn {
+            display: none;
+        }
+    }
+}

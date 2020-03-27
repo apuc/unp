@@ -1,0 +1,48 @@
+/**
+ * Преимущества
+ *
+ */
+
+.b-benefit {
+    &__list {
+        @extend .row;
+
+        padding-top: 0.75rem;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__item {
+        @extend .col-12;
+        @extend .col-md-6;
+        @extend .col-lg-3;
+
+        margin-bottom: 10px;
+    }
+
+    &__card {
+        @extend .card;
+
+        text-align:    center;
+        height:        100%;
+        line-height:   1.4;
+        margin-bottom: 0;
+    }
+
+    &__icon {
+        @extend .icon;
+
+        padding: 1rem 1rem 0;
+        margin:  0 auto;
+    }
+
+    &__caption {
+        @extend .card-body;
+
+        p {
+            @extend .card-title;
+        }
+    }
+}

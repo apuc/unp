@@ -1,0 +1,311 @@
+/**
+ * Личный кабинет
+ *
+ */
+
+// Мой аккаунт
+.my-account {
+    padding: 10px 0;
+}
+
+.btn-account {
+    width: 245px;
+}
+
+.my-step {
+    justify-content: center;
+    margin-bottom:   10px;
+
+    .col-auto {
+        text-align:     center;
+        padding-bottom: 10px;
+    }
+
+    .hd {
+        font-weight:   600;
+        margin-bottom: 3px;
+    }
+}
+
+.status {
+    width:      90px;
+    height:     30px;
+    background: $gray-300;
+}
+
+.btn-account-row {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    border-top:     1px solid $gray-300;
+    text-align:     center;
+    margin-right:   -10px;
+    margin-left:    -10px;
+
+    @include media-breakpoint-down(sm) {
+        .col-12 + .col-12 {
+            margin-top: 10px;
+        }
+    }
+
+    &.row-top {
+        border-top:    0;
+        border-bottom: 1px solid $gray-300;
+        margin-bottom: 10px;
+    }
+}
+
+// финансы
+.my-finance {
+    .btn-group {
+        .btn {
+            @include media-breakpoint-down(xl) {
+                padding-left:  0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+}
+
+.select-period {
+    width:  202px;
+    margin: 0 auto 10px;
+}
+
+.calendar-box {
+    position:      relative;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+
+    .btn {
+        cursor: pointer;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .fa {
+        font-size: 15px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+}
+
+// прибыль
+.my-profit {
+    .sort-box {
+        margin-bottom: 10px;
+
+        &__title {
+            font-size:      1rem;
+            text-transform: none;
+            font-weight:    600;
+        }
+    }
+
+    .table-sm {
+        tr {
+            th:first-child, td:first-child {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+// настройки
+.avatar-act {
+    margin-left: 1rem;
+
+    .custom-control {
+        margin-top: 1rem;
+
+        .custom-control-label {
+            font-weight: normal;
+            font-size:   0.929rem;
+        }
+    }
+
+    .btn-light {
+        text-transform: none;
+        font-weight:    normal;
+        font-size:      0.929rem;
+    }
+}
+
+.settings-card {
+    .card-body {
+        display:        flex;
+        flex-direction: row;
+        align-items:    center;
+    }
+
+    img {
+        width:        50px;
+        margin-right: 1.5rem;
+    }
+
+    a {
+        color:           $gray-900;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            color:           $hover-color;
+            text-decoration: none;
+        }
+    }
+
+    .social-del {
+        .fa {
+            font-size: 30px;
+        }
+    }
+}
+
+.notification-setting {
+    .custom-control {
+        padding-left:  0;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    .custom-control-label {
+        display:       block;
+        padding-right: 20px;
+
+        &::after {
+            right: 0;
+            left:  auto;
+            top:   4px;
+        }
+
+        &::before {
+            right: 0;
+            left:  auto;
+            top:   4px;
+        }
+    }
+}
+
+// личный кабинет - уведомления
+.notify-card {
+    flex-direction: row;
+    font-size:      0.929rem;
+
+    time {
+        font-size:  0.929rem;
+        padding:    1rem 0 1rem 1rem;
+        text-align: right;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+// мои обращения
+.issue-card {
+    .card-body {
+        padding: 1rem;
+        @include hover-color;
+
+        a {
+            font-weight: 600;
+        }
+    }
+}
+
+// комментарии
+.comment-card {
+    .card-body {
+        padding: 0 1rem 1rem;
+    }
+}
+
+// личный кабинет - мои прогнозы - прогноз
+.account-forecasts-detail {
+    .btn-account-row {
+        text-align:  left;
+        display:     flex;
+        align-items: center;
+        padding:     10px;
+
+        a, span {
+            margin: 0 10px 0 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            text-align:     center;
+            flex-direction: column;
+
+            a, span {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+}
+
+.btn .fa-trash-o {
+    margin:    0;
+    font-size: 20px;
+}
+
+.odds-bookmakers {
+    background: $white;
+    padding:    10px;
+}
+
+.tbl-odds {
+    th, td {
+        text-align:     center;
+        vertical-align: middle;
+    }
+
+    th {
+        background: $gray-200;
+        //word-break: break-all;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 0.857rem;
+        }
+    }
+}
+
+.odds-box {
+    margin-top: 1rem;
+
+    &-title {
+        padding-bottom: 0.5rem;
+
+        span {
+            cursor: pointer;
+        }
+    }
+}
+
+.label-bottom {
+    margin-top:  3px;
+    font-size:   0.929rem;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 0.857rem;
+    }
+}
+
+.f-coef {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+
+        input {
+            width: 135px;
+        }
+    }
+}

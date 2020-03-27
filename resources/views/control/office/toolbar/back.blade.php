@@ -1,0 +1,1 @@
+<a class="btn btn-light" href="{{ $url }}"><i class="fa fa-arrow-left"></i></a>

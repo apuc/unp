@@ -1,0 +1,35 @@
+/**
+ *  Новости
+ *
+ */
+
+.briefs-card {
+  .card-body {
+    padding: 0 1rem 0.5rem;
+    display: flex;
+    min-height:    40px;
+
+    time {
+      margin-right: 1rem;
+      margin-top:   3px;
+      text-align:   right;
+
+      .date {
+        display:   block;
+        font-size: 0.875em;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: $gray-900;
+
+      &:hover, &:focus {
+        color: $hover-color;
+      }
+    }
+  }
+}

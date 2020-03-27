@@ -1,0 +1,2 @@
+<li><a href="<?php echo e(route($route)); ?>"<?php echo $route == $current ? ' class="active"' : ''; ?>><?php echo e($label); ?></a></li-->
+<?php /**PATH /var/www/sportliga/site/sportliga.com/resources/views/control/site/menu/item.blade.php ENDPATH**/ ?>

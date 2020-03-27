@@ -1,0 +1,76 @@
+﻿//
+//  Кнопки и формы
+//
+
+.btn {
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.btn.print {
+  margin-right: 5px;
+}
+
+.btn-inverse {
+  background: $white;
+  color: theme-color("primary");
+  border-color: theme-color("primary");
+}
+
+button.close {
+  cursor: pointer;
+}
+
+.input-group-addon .fa {
+  cursor: pointer;
+}
+
+.has-error .help-block,
+.has-error .col-form-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #a94442;
+}
+
+.has-error .form-control,
+.has-error .custom-select
+{
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.has-error .form-control:focus,
+.has-error .custom-select:focus
+{
+  border-color: #843534;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+.help-block {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.ss-crud-form .alert.alert-danger {
+  margin-bottom: 0;
+}
+
+.alert.alert-danger .help-block {
+  margin-top: 0;
+  color: #a94442;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+  top: 0.15rem;
+}

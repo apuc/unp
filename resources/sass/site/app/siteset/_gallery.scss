@@ -1,0 +1,107 @@
+/**
+ * Галерея
+ */
+
+.siteset-gallery-loader {
+    position:    absolute;
+    margin-left: -200px;
+    top:         0;
+    width:       100px;
+    height:      100px;
+    overflow:    auto;
+}
+
+.siteset-gallery-loader img {
+    display: block;
+}
+
+.siteset-gallery-modal-bg {
+    position:         fixed;
+    top:              0;
+    left:             0;
+    width:            100%;
+    height:           100%;
+    display:          none;
+    z-index:          2000;
+    background-color: #333;
+}
+
+.siteset-gallery-modal {
+    position:           absolute;
+    display:            none;
+    z-index:            2001;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow:         0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.siteset-gallery-modal img {
+    width: 100%;
+}
+
+.siteset-gallery-close {
+    background: transparent url(/images/siteset-gallery-switch.png) 0 0 no-repeat;
+    cursor:     pointer;
+    width:      30px;
+    height:     30px;
+    position:   absolute;
+    right:      -13px;
+    top:        -13px;
+    z-index:    2101;
+}
+
+.siteset-gallery-switch-left, .siteset-gallery-switch-right {
+    position: absolute;
+    width:    50%;
+    height:   100%;
+    bottom:   0;
+    cursor:   pointer;
+    z-index:  2100;
+}
+
+.siteset-gallery-switch-left {
+    left: 0;
+}
+
+.siteset-gallery-switch-right {
+    right: 0;
+}
+
+.siteset-gallery-switch-left:hover .siteset-gallery-switch-left-ico {
+    left: 20px;
+}
+
+.siteset-gallery-switch-right:hover .siteset-gallery-switch-right-ico {
+    right: 20px;
+}
+
+.siteset-gallery-switch-left-ico {
+    background: transparent url(/images/siteset-gallery-switch.png) 0 -30px no-repeat;
+    left:       -9999px;
+}
+
+.siteset-gallery-switch-right-ico {
+    background: transparent url(/images/siteset-gallery-switch.png) 0 -60px no-repeat;
+    right:      9999px;
+}
+
+.siteset-gallery-switch-left-ico, .siteset-gallery-switch-right-ico {
+    cursor:     pointer;
+    width:      30px;
+    height:     30px;
+    position:   absolute;
+    top:        50%;
+    margin-top: -15px;
+    z-index:    2101;
+}
+
+.siteset-gallery-count {
+    margin-left: 5px;
+    color:       #fff;
+}
+
+.siteset-gallery-desc {
+    position:    absolute;
+    margin-left: 5px;
+    margin-top:  -20px;
+    color:       #fff;
+}

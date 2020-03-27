@@ -1,0 +1,134 @@
+/**
+ * Букмекеры
+ *
+ */
+
+.bookmaker-name {
+    font-size:      1.286rem;
+    font-weight:    600;
+    text-transform: uppercase;
+    @include hover-color;
+}
+
+.bookmaker-logo {
+    position:    relative;
+    overflow:    hidden;
+    width:       120px;
+    height:      50px;
+    display:     flex;
+    align-items: center;
+
+    img {
+        max-width:  120px;
+        max-height: 50px;
+    }
+}
+
+.bookmaker-bonus {
+    font-size:   1.286rem;
+    line-height: 1.2;
+
+    b {
+        display:     block;
+        font-weight: 600;
+    }
+}
+
+.bookmaker-card {
+    .bookmaker-logo {
+        margin: 0 auto;
+    }
+
+    .bookmaker-name {
+        display: none;
+    }
+
+    .bookmaker-bonus {
+        text-align: center;
+        margin:     1rem 0;
+    }
+}
+
+.cards_list {
+    .bookmaker-card {
+        flex-direction:  row;
+        justify-content: space-between;
+        min-height:      71px;
+
+        .card-header {
+            display: none;
+        }
+
+        .card-body {
+            display:         flex;
+            flex-direction:  row;
+            justify-content: space-between;
+            align-items:     center;
+        }
+
+        .card-footer {
+            border-radius: 0 calc(7px - 1px) calc(7px - 1px) 0;
+
+            .btn + .btn {
+                margin-left: 1rem;
+            }
+        }
+
+        .bookmaker-header {
+            display:     flex;
+            align-items: center;
+
+            .bookmaker-logo {
+                margin-right: 1rem;
+                margin-left:  0;
+            }
+        }
+
+        .bookmaker-name {
+            display: block;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+
+        .bookmaker-bonus {
+            text-align: right;
+            margin:     0;
+        }
+    }
+}
+
+// на главной
+.bookmaker-card.card_list {
+    min-height: 71px;
+
+    .bookmaker-header {
+        display:     flex;
+        align-items: center;
+
+        .bookmaker-logo {
+            margin-right: 1rem;
+            margin-left:  0;
+        }
+    }
+
+    .bookmaker-name {
+        display: block;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    .bookmaker-bonus {
+        text-align: right;
+        margin:     0;
+    }
+
+    .card-footer {
+        .btn + .btn {
+            margin-left: 1rem;
+        }
+    }
+}

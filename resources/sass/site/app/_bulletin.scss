@@ -1,0 +1,62 @@
+/**
+ * Баннер брендирования
+ *
+ */
+
+.branding-bulletin {
+    display:             none;
+    position:            fixed;
+    background-position: 50% 0;
+    background-repeat:   no-repeat;
+    height:              100%;
+    width:               100%;
+    top:                 0;
+    left:                0;
+}
+
+body.bg-branding-bulletin {
+    // Отступ баннера брендирования от верхнего края экрана. Обычно в пределах 250px;
+    padding-top: 0px;
+
+    @media not screen and (min-device-width: 1024px) {
+      padding-top: 0;
+    }
+
+    .branding-bulletin {
+        display: block;
+
+        @media not screen and (min-device-width: 1024px) {
+        	display: none;
+        }
+    }
+}
+
+.bulletin-top {
+    background: $white;
+
+    img {
+        width: 100%;
+    }
+}
+
+.bulletin-bottom {
+    padding-bottom: 10px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.bulletin-sidebar {
+	display: none;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        height:    auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+    	display: block;
+    }
+}

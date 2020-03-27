@@ -1,0 +1,3 @@
+<button onclick="ssCRUD().setAction('destroy').destroy('<?php echo e($route); ?>', '<?php echo e(csrf_token()); ?>', '<?php echo app('translator')->get('document.destroy'); ?>');" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="<?php echo app('translator')->get('button.office.delete'); ?>">
+    <i class="fa fa-trash"></i>
+</button><?php /**PATH /var/www/sportliga/site/sportliga.com/resources/views/control/office/table/delete.blade.php ENDPATH**/ ?>

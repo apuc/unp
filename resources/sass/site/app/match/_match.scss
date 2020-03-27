@@ -1,0 +1,698 @@
+﻿/**
+ * Матчи - События
+ *
+ */
+
+.event {
+  &__header {
+    background:      $yellow;
+    position:        relative;
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    height:          30px;
+    position:        relative;
+  }
+
+  &__check {
+    width:       30px;
+    height:      30px;
+    text-align:  center;
+    line-height: 30px;
+  }
+
+  &__icon {
+    display:     block;
+    width:       30px;
+    height:      30px;
+    text-align:  center;
+    line-height: 30px;
+    cursor:      pointer;
+
+    &[data-toggle="collapse"]:after {
+      content:     '\f106';
+      display:     inline-block;
+      font-family: FontAwesome;
+      line-height: 1;
+      font-size:   18px;
+      font-weight: normal;
+    }
+
+    &[data-toggle="collapse"].collapsed:after {
+      content: '\f107';
+    }
+  }
+
+  &__title {
+    display:         flex;
+    flex-direction:  row;
+    align-items:     center;
+    position:        relative;
+    line-height:     1.1;
+    white-space:     nowrap;
+    overflow:        hidden;
+    flex:            1;
+    justify-content: flex-start;
+    max-width:       100%;
+
+    &-type {
+      text-transform: uppercase;
+
+      &::after {
+        content: ':\A0';
+      }
+    }
+
+    &-name {
+      text-decoration: none;
+      font-weight:     600;
+      color:           $gray-900;
+
+      &:hover, &:focus {
+        color:           $gray-900;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__item {
+    display:       flex;
+    align-items:   center;
+    border-bottom: 1px solid #e5e5e5;
+    cursor:        pointer;
+
+    &:hover {
+      background: $gray-200;
+    }
+  }
+
+  &__time {
+    width: 60px;
+  }
+
+  &__participant {
+    flex: 1;
+  }
+
+  &__score {
+    width: 50px;
+  }
+
+  &__odds {
+    min-width: 50px;
+  }
+}
+
+.event-card {
+  .card-body {
+    text-align: center;
+  }
+
+  .card-subtitle {
+    @include hover-color;
+    margin-bottom: 0.5rem;
+  }
+
+  &__participants {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	margin: 1rem 0 0.5rem;
+  }
+
+  &__participant {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	text-decoration: none;
+  	color: $gray-900;
+  	flex: 1;
+
+  	h4 {
+    	font-size: 1rem;
+    	font-weight: 600;
+    	line-height: 1.2;
+    	margin: 0;
+  	}
+
+  	&:hover {
+  	  	text-decoration: $hover-color;
+  	}
+
+  	img {
+  		height: 30px;
+  		width: auto;
+  		margin: 0 0.5rem;
+  	}
+  }
+
+  &__score {
+  	background-color: rgba(0, 0, 0, 0.03);
+  	min-width: 50px;
+
+  	&-1, &-2 {
+  	  font-size: 1.143rem;
+  	  font-weight: 600;
+  	}
+  }
+
+  &__rates {
+    display:         flex;
+    justify-content: space-around;
+    align-items:     center;
+    margin-top:      1rem;
+
+    .bookmaker-name_sm {
+      color: $gray-900;
+
+      &:hover, &:focus {
+        color: $hover-color;
+      }
+    }
+
+    img {
+      max-height: 26px;
+      margin-top: 5px;
+    }
+  }
+
+  .event-date {
+    text-align:  right;
+    font-size:   1rem;
+    line-height: 1.2;
+  }
+
+  .card-footer {
+    .text-uppercase {
+      font-weight: 600;
+    }
+  }
+
+  .rates_tile {
+    display: none;
+  }
+
+  .event-btn {
+    display: none;
+  }
+}
+
+.bookmaker-name_sm {
+  font-size:      0.857rem;
+  font-weight:    normal;
+  text-transform: uppercase;
+  line-height:    1.2;
+  @include hover-color;
+}
+
+// события - плитка
+.cards_tile {
+  .event-card {
+    .card-subtitle {
+      font-size:     0.857rem;
+      margin-bottom: 1rem;
+    }
+
+    &__teams {
+      flex-direction: column;
+    }
+
+    .bookmaker-name_sm {
+      transform: rotate(-90deg);
+      display:   inline-block;
+    }
+
+    &__rates {
+      justify-content: space-between;
+      min-height:      80px;
+      position:        relative;
+      overflow:        hidden;
+    }
+
+    .rate {
+      display:         flex;
+      justify-content: center;
+      align-items:     center;
+    }
+
+    .rate-val {
+      display:  inline-block;
+      position: relative;
+    }
+
+    .event-btn {
+      display: block;
+    }
+
+    .card-footer .btn {
+      display: none;
+    }
+
+    .rates_list {
+      display: none;
+    }
+
+    .rates_tile {
+      display: flex;
+
+      a {
+        display:         flex;
+        align-items:     center;
+        justify-content: center;
+        text-decoration: none;
+        transform:       rotate(-90deg);
+        margin-left:     -10px;
+      }
+
+      img {
+        margin-top: 0;
+        width:      64px;
+        height:     26px;
+
+        @include media-breakpoint-between(md, lg) {
+          width:  50px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+// детализация
+.matches-detail {
+  margin-bottom: 20px;
+
+  &__participants {
+  	display: flex;
+  	justify-content: space-between;
+  }
+
+  &__participant {
+    width: 45%;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      width: 40%;
+    }
+
+  	&-img {
+  	  width: 100px;
+  	  height: 100px;
+  	  margin: 0 auto;
+
+      @include media-breakpoint-down(sm) {
+        width: 50px;
+        height: 50px;
+      }
+
+  	  img {
+  	    height: 100px;
+  		width: 100%;
+  		object-fit: cover;
+
+        @include media-breakpoint-down(sm) {
+          height: 50px;
+        }
+  	  }
+  	}
+
+  	h3 {
+      margin-top: 10px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__score {
+    font-size: 2rem;
+    font-weight: 600;
+    align-self: center;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
+
+    &-1 {
+      display: inline-block;
+      padding-right: 7px;
+    }
+
+    &-2 {
+      display: inline-block;
+      position: relative;
+      padding-left: 7px;
+
+      &:before {
+        display: block;
+        content: ":";
+        position: absolute;
+        left: -7px;
+        top: -1px;
+      }
+    }
+  }
+}
+
+.bets-box {
+  width: 100%;
+  overflow-y: hidden;
+  position: relative;
+
+  .nav-tabs {
+    border-bottom: 0;
+
+    .nav-item {
+      margin-bottom: 0;
+    }
+
+    .nav-link {
+      white-space: nowrap;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+
+  .tab-content,
+  .tab-pane {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.outcometype-tabs {
+  width: 100%;
+  flex-wrap: nowrap;
+  border-bottom: 0;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nav-link {
+    padding: 0.25rem;
+    font-size:       0.857rem;
+    line-height:     1.3;
+    text-decoration: none;
+    margin-left:     1px;
+    margin-right:    1px;
+    background:      $gray-300;
+    color:           $gray-900;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0.35rem 0.5rem;
+    }
+
+    &:hover {
+      background-color: $gray-400;
+    }
+
+    &.active {
+      background-color: $gray-500;
+      color: $white;
+
+      &:hover {
+        background-color: $gray-500;
+        color: $white;
+      }
+    }
+  }
+}
+
+.outcometype-content {
+  @include card-box-shadow;
+
+  background: $white;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.outcomescope-tabs {
+  width: 100%;
+  flex-wrap: nowrap;
+  background: $gray-500;
+  padding: 3px 10px;
+
+  .nav-link {
+    padding:         0.35rem 0.5rem;
+    font-size:       0.857rem;
+    line-height:     1.3;
+    text-decoration: none;
+    margin-left:     1px;
+    margin-right:    1px;
+    background:      transparent;
+    color:           $white;
+
+    &:hover {
+      background-color: $gray-600;
+    }
+
+    &.active {
+      background-color: $gray-600;
+      color: $white;
+
+      &:hover {
+        background-color: $gray-600;
+        color: $white;
+      }
+    }
+  }
+}
+
+.bets-table {
+  thead th {
+    background: $gray-100;
+    text-align: center;
+    font-size: 11px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 0.929rem;
+    }
+  }
+
+  .outcomesubtype {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .active-down {
+      position: relative;
+
+      &::after {
+        font: normal normal normal 14px/1 FontAwesome;
+        content:   "\f0d7";
+        display:   inline-block;
+      }
+    }
+
+    .active-up {
+      position: relative;
+
+      &::after {
+        font: normal normal normal 14px/1 FontAwesome;
+        content:   "\f0d8";
+        display:   inline-block;
+      }
+    }
+  }
+
+  td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.25rem;
+
+    a {
+      text-decoration: none;
+      color: $gray-900;
+
+      &:hover, &:focus {
+        color: $theme-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .bookmaker {
+    padding-left: 5px;
+    padding-right: 0;
+    text-align: left;
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 10px;
+      padding-right: 0.25rem;
+    }
+
+    img {
+      width: 50px;
+      height: auto;
+
+      @include media-breakpoint-up(sm) {
+        width: 64px;
+      }
+    }
+  }
+
+  .make-prediction {
+    text-decoration: none;
+    color: $gray-900;
+
+    &:hover, &:focus {
+      color: $theme-color;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(/images/icon-magic.png) no-repeat;
+      position: relative;
+      top: 2px;
+    }
+
+    span {
+      display: none;
+      text-decoration: underline;
+      margin-left: 7px;
+
+      @include media-breakpoint-up(sm) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .deal {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 11px;
+    border-radius: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #212529;
+    background-color: #e8c70f;
+    border: 1px solid #e8c70f;
+    min-width: 40px;
+
+    @include media-breakpoint-up(sm) {
+      border-radius: 15px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.875rem;
+      min-width: 60px;
+    }
+
+    &:hover {
+      background-color: #e75725;
+      border-color: #e75725;
+      color: #fff;
+    }
+  }
+
+  .odds {
+    position: relative;
+    font-size: 0.875rem;
+    cursor: pointer;
+
+    a {
+      display: block;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 0.929rem;
+    }
+
+    &-max {
+      background-color: #d4edda;
+    }
+
+    &-yellow {
+      background-color: #ffc107;
+    }
+
+    span, strike {
+      position:     relative;
+      padding-left: 7px;
+      display: inline-block;
+      width: 43px;
+      text-align: right;
+
+      @include media-breakpoint-up(sm) {
+        padding-left: 13px;
+        width: 54px;
+      }
+    }
+
+    .down,
+    .up {
+      &::before {
+        content:   "";
+        display:   inline-block;
+        width:     7.942px;
+        height:    10px;
+        position:  absolute;
+        top:       50%;
+        left:      0;
+        transform: translateY(-50%);
+        background-image:    url(/images/icons.svg);
+        background-repeat:   no-repeat;
+      }
+    }
+
+    .down::before {
+      background-position: -210px -30px;
+    }
+
+    .up::before {
+      background-position: -210px 0px;
+    }
+  }
+}
+
+.account-forecasts-detail .bets-table {
+  .odds {
+    &:hover {
+      background-color: #ffc107;
+    }
+  }
+}
+
+
+.bookmaker-table {
+  margin-top: 1.5rem;
+  line-height: 1.3;
+
+  th, td {
+    text-align: center;
+  }
+
+  th {
+    font-size: 11px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 0.929rem;
+    }
+  }
+
+  .bookmaker {
+    padding-left: 5px;
+    text-align: left;
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 10px;
+    }
+
+    img {
+      width: 50px;
+      height: auto;
+
+      @include media-breakpoint-up(sm) {
+        width: 64px;
+      }
+    }
+  }
+}

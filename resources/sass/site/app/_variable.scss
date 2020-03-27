@@ -1,0 +1,163 @@
+﻿/**
+ * Переменные
+ *
+ */
+
+// Color system
+$white:                    #fff !default;
+$gray-100:                 #f8f9fa !default;
+$gray-200:                 #e9ecef !default;
+$gray-300:                 #dee2e6 !default;
+$gray-400:                 #ced4da !default;
+$gray-500:                 #adb5bd !default;
+$gray-600:                 #6c757d !default;
+$gray-700:                 #495057 !default;
+$gray-800:                 #343a40 !default;
+$gray-900:                 #212529 !default;
+$black:                    #000 !default;
+
+$grays:                    () !default;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays:                    map-merge(
+                                   (
+                                       "100": $gray-100,
+                                       "200": $gray-200,
+                                       "300": $gray-300,
+                                       "400": $gray-400,
+                                       "500": $gray-500,
+                                       "600": $gray-600,
+                                       "700": $gray-700,
+                                       "800": $gray-800,
+                                       "900": $gray-900
+                                   ),
+                                   $grays
+                           );
+
+$blue:                     #0a76af; //#007bff !default;
+$indigo:                   #6610f2 !default;
+$purple:                   #6f42c1 !default;
+$pink:                     #e83e8c !default;
+$red:                      #dc3545 !default;
+$orange:                   #e75725;
+$yellow:                   #e8c70f;
+$greenyellow:			   #adff2f;
+$green:                    #28a745 !default;
+$teal:                     #20c997 !default;
+$cyan:                     #17a2b8 !default;
+$brown:                    #a52a2a !default;
+$gray:                     #808080 !default;
+$lightgray:                #d3d3d3 !default;
+
+$colors:                   () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors:                   map-merge(
+                                   (
+                                       "blue": $blue,
+                                       "indigo": $indigo,
+                                       "purple": $purple,
+                                       "pink": $pink,
+                                       "red": $red,
+                                       "orange": $orange,
+                                       "yellow": $yellow,
+                                       "green": $green,
+                                       "teal": $teal,
+                                       "cyan": $cyan,
+                                       "white": $white,
+                                       "gray": $gray-600,
+                                       "gray-dark": $gray-800
+                                   ),
+                                   $colors
+                           );
+
+$primary:                  $blue;
+$secondary:                $gray-600 !default;
+$success:                  $green !default;
+$info:                     $cyan !default;
+$warning:                  $yellow !default;
+$danger:                   $red !default;
+$light:                    $gray-100 !default;
+$dark:                     #1b1b1b;
+
+$theme-colors:             () !default;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors:             map-merge(
+                                   (
+                                       "primary": $primary,
+                                       "secondary": $secondary,
+                                       "success": $success,
+                                       "info": $info,
+                                       "warning": $warning,
+                                       "danger": $danger,
+                                       "light": $light,
+                                       "dark": $dark
+                                   ),
+                                   $theme-colors
+                           );
+
+
+$theme-color:              $blue;
+$hover-color:              $orange;
+
+// Options
+$enable-shadows:           true;
+
+$grid-breakpoints:         (
+                               xs: 0,
+                               sm: 576px,
+                               md: 768px,
+                               lg: 992px,
+                               xl: 1200px
+                           ) !default;
+
+$container-max-widths:     (
+                               sm: 540px,
+                               md: 720px,
+                               lg: 960px,
+                               xl: 1140px
+                           );
+
+// Scaffolding
+$body-bg:                  #f2f2f2;
+$link-decoration:          underline;
+
+// Typography
+$font-family-sans-serif:   -apple-system, BlinkMacSystemFont, "Open Sans", Roboto, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$h1-font-size:             1.75rem;
+$h2-font-size:             1.5rem;
+$h3-font-size:             1.25rem;
+$h4-font-size:             1.125rem;
+
+// Forms
+$input-box-shadow:         none;
+$input-focus-border-color: $gray-500;
+
+$input-border-radius:      0;
+$input-border-radius-lg:   0;
+$input-border-radius-sm:   0;
+
+$input-font-size:          0.929rem;
+$input-font-size-sm:       0.929rem;
+$input-padding-y:          0.3rem;
+
+$btn-box-shadow:           none;
+
+// Buttons
+$input-btn-padding-y:      0.4rem;
+$input-btn-padding-x:      1rem;
+$input-btn-focus-width:    0;
+$input-btn-padding-y-sm:   .25rem;
+$input-btn-padding-x-sm:   0.75rem;
+
+$btn-active-box-shadow:    none;
+
+// Grid
+$grid-gutter-width:        20px;
+
+// Breadcrumb
+$breadcrumb-bg:            transparent;
+$breadcrumb-padding-y:     .75rem;
+$breadcrumb-padding-x:     0;
+$breadcrumb-margin-bottom: 0;

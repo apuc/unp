@@ -1,0 +1,99 @@
+/**
+ * Карточка пользователя
+ *
+ */
+
+.user-card {
+    .user-name {
+        font-weight: 600;
+        color:       $gray-900;
+    }
+
+    .card-footer {
+        justify-content: center;
+
+        .btn + .btn {
+            margin-left: 0.5rem;
+        }
+    }
+
+    &__info {
+        font-size:  0.929rem;
+        margin-top: 10px;
+
+        @include media-breakpoint-only(lg) {
+            font-size: 0.857rem;
+        }
+    }
+
+    .info-row {
+        display:       flex;
+        margin-bottom: 5px;
+        line-height:   1.3;
+
+        .info-col:first-child {
+            width:       60%;
+            font-weight: 600;
+        }
+
+        .info-col:last-child {
+            width:        40%;
+            padding-left: 10px;
+        }
+    }
+}
+
+.cards_tile .user-card {
+    .card-user {
+        justify-content: center;
+    }
+}
+
+.cards_list {
+    .user-card {
+        .card-header {
+            display: none;
+        }
+
+        .card-body {
+            display: flex;
+        }
+
+        &__info {
+            margin-top:      0;
+            display:         flex;
+            flex:            1;
+            justify-content: space-between;
+        }
+
+        .info-row {
+            flex-direction: column;
+            text-align:     center;
+            margin-left:    10px;
+            margin-bottom:  0;
+
+            .info-col:first-child {
+                width: auto;
+            }
+
+            .info-col:last-child {
+                width:        auto;
+                padding-left: 0;
+            }
+        }
+
+        .user-name {
+            width:         100px;
+            overflow:      hidden;
+            text-overflow: ellipsis;
+            white-space:   nowrap;
+        }
+
+        .card-footer {
+            .btn + .btn {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+

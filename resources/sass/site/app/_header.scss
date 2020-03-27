@@ -1,0 +1,332 @@
+﻿/**
+ *  Шапка
+ *
+ */
+
+.header {
+    background: #1b1b1b;
+    position:   relative;
+    padding:    10px 20px;
+
+    @include media-breakpoint-down(md) {
+        padding: 5px 10px;
+    }
+}
+
+.logo {
+	line-height: 0;
+
+    img {
+        font-size: 0;
+        height:    32px;
+
+        @include media-breakpoint-down(md) {
+            height: 22px;
+        }
+
+    	@media (max-width: 374.9px) {
+    		height: 18px;
+    	}
+    }
+}
+
+.header-nav {
+    .nav-link {
+        font-size:      0.875rem;
+        color:          $white;
+        text-transform: uppercase;
+        transition:     all .25s ease;
+        padding: 0.25rem 0.643rem;
+
+        &:hover, &:focus, &.active {
+            color:           $hover-color;
+            text-decoration: none;
+        }
+
+        @include media-breakpoint-down(lg) {
+        	padding: 0.25rem 0.5rem;
+        	font-size: 11px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.user-box {
+    display:     flex;
+    align-items: center;
+
+    .logon-box {
+        display:     flex;
+        align-items: center;
+        
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .user-link {
+        margin: 0 3px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+    }
+}
+
+.logon-box-m {
+	display: none;
+
+	@include media-breakpoint-down(sm) {
+		display:  block;
+	}
+
+    .icon {
+        display:       inline-block;
+        width:         30px;
+        height:        30px;
+        line-height:   30px;
+        background:    $gray-700;
+        color:         $white;
+        border-radius: 50%;
+        text-align:    center;
+        font-size:     16px;
+    }
+
+    .logon-link {
+        color:  $white;
+        cursor: pointer;
+        position: relative;
+
+        &:hover, &:focus {
+            color: $hover-color;
+
+            .icon {
+                background: $hover-color;
+                color:      $white;
+            }
+        }
+    }
+}
+
+.nav-box {
+    background-color: $gray-800;
+
+    .nav-link {
+        font-size:      0.875rem;
+        color:          $white;
+        text-transform: uppercase;
+        transition:     all .25s ease;
+
+        &:hover, &:focus, &.active {
+            color:           $hover-color;
+            text-decoration: none;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.menu {
+    position: relative;
+
+    .menu-item {
+        position: static;
+
+        .dropdown-toggle::after {
+            position: relative;
+            top:      1px;
+        }
+
+        &:hover {
+            .win-menu {
+                display: block;
+            }
+
+            .nav-link {
+                &, &:hover, &:focus {
+                    color:           $hover-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &.show {
+        a {
+            color: $red;
+        }
+    }
+}
+
+.win-nav.win-menu {
+    max-height: calc(100vh - 86px);
+
+    ul {
+        columns: 3;
+    }
+}
+
+// личный кабинет
+.account-user-box {
+    display: flex;
+
+    .user-link {
+        position: static;
+
+        @media (max-width: 374.9px) {
+        	margin: 0 2px;
+        }
+    }
+
+    .icon {
+        display:       inline-block;
+        width:         30px;
+        height:        30px;
+        line-height:   30px;
+        background:    $gray-700;
+        color:         $white;
+        border-radius: 50%;
+        text-align:    center;
+        font-size:     16px;
+    }
+
+    .account-link {
+        color:  $white;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            color: $hover-color;
+
+            .icon {
+                background: $hover-color;
+                color:      $white;
+            }
+
+            .icon-svg {
+                background: $hover-color;
+            }
+        }
+
+        .a-content {
+            margin-left: 3px;
+        }
+    }
+
+    .account-user {
+        .account-link {
+            display:     flex;
+            align-items: center;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .a-content {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .user-box {
+        .account-user {
+            display: block !important;
+        }
+    }
+}
+
+// nav fix
+.nav-ontop {
+    position: fixed;
+    top:      0;
+    left:     auto;
+    right:    auto;
+    z-index:  1030;
+    width:    100%;
+}
+
+// кнопка навигации
+.win-nav-link {
+    position:    static;
+    margin-left: 10px;
+    display:     none;
+
+    @include media-breakpoint-down(md) {
+      display: inline-block;
+    }
+
+    @media (max-width: 374.9px) {
+    	margin-left: 5px;
+    }
+}
+
+.icon-svg__account, .icon-svg__menu {
+    display:  block;
+    position: absolute;
+    top:      50%;
+    left:     50%;
+    fill:     $white;
+}
+
+.icon-svg {
+    width:         30px;
+    height:        30px;
+    background:    $gray-700;
+    border-radius: 50%;
+    cursor:        pointer;
+    position:      relative;
+    display:       block;
+
+    &__menu {
+        width:  14px;
+        height: 12px;
+        margin: -6px 0 0 -7px;
+    }
+
+    &__account {
+        width:  18px;
+        height: 18px;
+        margin: -9px 0 0 -9px;
+    }
+
+    &:hover, &:focus {
+        background: $hover-color;
+    }
+}
+
+.icon-svg svg {
+    max-width:      100%;
+    max-height:     32px;
+    fill:           inherit;
+    vertical-align: top;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.show {
+    .icon-svg__menu {
+        svg {
+            display: none;
+        }
+
+        width:           12px;
+        height:          12px;
+        background:      url(/images/win-close-white.png) no-repeat;
+        background-size: cover;
+        margin:          -6px 0 0 -6px;
+    }
+
+    .icon-svg {
+        background: $hover-color;
+    }
+
+    .account-link .icon {
+        background: $hover-color;
+    }
+}

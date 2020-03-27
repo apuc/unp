@@ -1,0 +1,85 @@
+﻿//
+// Dashboart
+//
+
+.card-deck {
+  margin-right: -15px;
+  margin-left: -15px;
+
+  .card {
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.dashboart {
+  &__item {
+    background-color: $green;
+    color: $white;
+    line-height: 1.1;
+
+    &:hover {
+      background-color: darken($green, 5%);
+    }
+
+    &.active {
+      background-color: $red;
+
+      &:hover {
+        background-color: darken($red, 5%);
+      }
+    }
+  }
+
+  &__title {
+    text-align: right;
+    font-size: 18px;
+
+    b {
+      font-weight: normal;
+      display: block;
+      font-size: 36px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+  }
+
+  .card-body {
+    .fa {
+      font-size: 60px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 40px;
+      }
+    } 
+  }
+
+  .card-footer {
+    border: 0;
+    border-radius: 0;
+    background-color: rgba($black,.075); /*darken($green, 5%); */
+
+    a {
+      text-decoration: none;
+      color: $gray-100;
+
+      &:hover, &:focus {
+        text-decoration: none;
+        color: $white;
+      } 
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .fa {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,339 @@
+﻿/**
+ *  Карточки
+ *
+ */
+
+// card
+.card-wrap {
+    display:        flex;
+    flex-direction: column;
+    background:     $gray-100;
+    padding:        0 10px;
+    margin-bottom:  20px;
+}
+
+.card {
+    border:        0;
+    @include card-box-shadow;
+    @include card-border-radius;
+    margin-bottom: 10px;
+
+    text-decoration: none;
+    color: inherit;
+
+    &:hover, &:focus {
+    	text-decoration: none;
+    	color: inherit;
+    }
+}
+
+a.card {
+    &:hover, &:focus {
+   	    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 0 5px 0 rgba(0, 0, 0, 0.12);
+	}
+}
+
+.card-header {
+    padding:     0.5rem 1rem 0;
+    display:     flex;
+    align-items: center;
+    border:      0;
+    background:  transparent;
+    color:       $gray-500;
+
+    .name {
+        font-size:      0.786rem;
+        height: 22px;
+        text-transform: uppercase;
+        margin-right:   5px;
+
+        a {
+            color: $gray-500;
+
+            &:hover, &:focus {
+                color: $hover-color;
+            }
+        }
+    }
+
+    &:first-child {
+        border-radius: calc(7px - 1px) calc(7px - 1px) 0 0;
+    }
+}
+
+.ic-other {
+    display:     block;
+    visibility:  hidden;
+    cursor:      pointer;
+    margin-left: auto;
+
+    .fa {
+        font-size: 18px;
+    }
+
+    &:hover, &:focus {
+        color: $hover-color;
+    }
+}
+
+.card-header:hover .ic-other {
+    visibility: visible;
+}
+
+.card-body {
+    padding: 0.75rem 1rem;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+//.card-header + .card-body {
+//  padding-top: 0.75rem;
+//}
+
+.card-text {
+    p:first-child {
+        margin-top: 0.75rem;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.card-image-top {
+    display: block;
+
+    img {
+        height:     180px;
+        width:      100%;
+        object-fit: cover;
+    }
+}
+
+.card-footer {
+    padding:         0.25rem 1rem;
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    font-size:       0.929rem;
+    border:          0;
+
+    &:last-child {
+        border-radius: 0 0 calc(7px - 1px) calc(7px - 1px);
+    }
+
+    @include media-breakpoint-only(lg) {
+        font-size: 0.857rem;
+    }
+}
+
+.card-icons {
+    display:     flex;
+    align-items: center;
+
+    .card-icon {
+        display:         flex;
+        align-items:     center;
+        text-decoration: none;
+        margin-right:    1rem;
+        color:           $gray-800;
+        font-size:       1rem;
+
+//        &:last-child {
+//            margin-right: 0;
+//        }
+
+        &:hover, &:focus {
+        	color: $hover-color;
+        }
+
+        .fa {
+            font-size:    18px;
+            margin-right: 3px;
+        }
+
+        @include media-breakpoint-only(lg) {
+            font-size: 0.857rem;
+
+            .fa {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .btn-light {
+        margin-right: 20px;
+    }
+}
+
+.card-user {
+    display:     flex;
+    align-items: center;
+
+    .user-name {
+        line-height: 1.1;
+    }
+
+    time {
+        display:    block;
+        margin-top: 3px;
+    }
+
+    a {
+        font-weight: 600;
+
+        &:hover, &:focus {
+        	color: $hover-color;
+        }
+    }
+}
+
+.user-img {
+    display:         inline-block;
+    width:           33px;
+    height:          33px;
+    border-radius:   50%;
+    text-align:      center;
+    line-height:     33px;
+    background:      $gray-400;
+    font-size:       13px;
+    text-transform:  uppercase;
+    margin-right:    7px;
+    overflow:        hidden;
+    text-decoration: none;
+
+    img {
+        width:          33px;
+        height:         33px;
+        vertical-align: top;
+        object-fit:     cover;
+    }
+
+    a {
+        display:         block;
+        color:           $gray-900;
+        text-decoration: none;
+    }
+}
+
+.card-footer {
+    .card-user {
+        text-align: right;
+    }
+
+    .user-img {
+        margin: 0 0 0 7px;
+    }
+
+    .user-pic {
+        img {
+            width:         33px;
+            height:        33px;
+            margin-left:   7px;
+            border-radius: 50% !important;
+        }
+    }
+}
+
+.card-subtitle {
+    margin:      0;
+    line-height: 1.3;
+}
+
+.card-title {
+    font-size:   1rem;
+    margin:      0;
+    font-weight: 600;
+
+    a {
+        color: $gray-900;
+    }
+}
+
+.card {
+    .table {
+        margin: 10px 0;
+    }
+}
+
+// карточка - list
+.card_list {
+    flex-direction:  row;
+    justify-content: space-between;
+
+    .card-body {
+        display:         flex;
+        flex-direction:  row;
+        justify-content: space-between;
+        align-items:     center;
+    }
+
+    .card-footer {
+        border-radius: 0 calc(7px - 1px) calc(7px - 1px) 0;
+    }
+}
+
+// справка
+.category-list {
+    .card {
+        height:        100%;
+        margin-bottom: 0;
+    }
+
+    .card-body {
+        padding:    1rem;
+        text-align: center;
+        @include hover-color;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+}
+
+// детализция статьи и др.
+.card-detail {
+    margin-bottom: 20px;
+
+    .card-body {
+        padding: 1rem;
+
+      	img {
+          max-width: 100%;
+          height:    auto;
+          margin:    1rem auto;
+      	}
+    }
+}
+
+// tabs
+.btn-group.nav-pills {
+    margin-bottom: 10px;
+}
+
+.card.tab-content {
+    padding: 1rem;
+}
+
+// карточки для переключалок - общее
+.cards_list > .row > [class*="col-"] {
+    flex:      0 0 100%;
+    max-width: 100%;
+}
+
+.cards-box.cards_tile {
+    > .row > [class*="col-"] {
+        padding-bottom: 10px;
+    }
+
+    .card {
+        margin-bottom: 0;
+        height:        100%;
+    }
+}

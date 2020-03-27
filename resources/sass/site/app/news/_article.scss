@@ -1,0 +1,35 @@
+/*
+ *  Новости
+ *
+ */
+
+.article-card {
+    .card-body {
+        padding: 0.75rem 1rem 1rem;
+
+        h3 {
+            font-size:   1.286rem;
+            margin:      0.75rem 0 0;
+            font-weight: 600;
+            @include hover-color;
+
+            + p {
+              margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+.cards_list .article-card {
+    .card-image-top {
+        width:        200px;
+        float:        left;
+        margin-right: 1rem;
+        position:     relative;
+        overflow:     hidden;
+
+        img {
+            height: 150px;
+        }
+    }
+}

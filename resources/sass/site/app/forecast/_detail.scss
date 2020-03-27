@@ -1,0 +1,169 @@
+/**
+ * Детализация прогноза
+ *
+ */
+
+.forecasts-detail {
+  margin-bottom: 20px;
+
+  &__participants {
+  	display: flex;
+  	justify-content: space-between;
+  }
+
+  &__participant {
+    width: 45%;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      width: 40%;
+    }
+
+  	&-img {
+  	  width: 100px;
+  	  height: 100px;
+  	  margin: 0 auto;
+
+      @include media-breakpoint-down(sm) {
+        width: 50px;
+        height: 50px;
+      }
+
+  	  img {
+  	    height: 100px !important;
+  		width: 100%;
+  		object-fit: cover;
+        margin: 0 !important;
+
+        @include media-breakpoint-down(sm) {
+          height: 50px !important;
+        }
+  	  }
+  	}
+
+  	h3 {
+      margin-top: 10px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__hd {
+    text-align: center;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__val {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+
+    a {
+      color: $gray-900;
+    }
+
+    &-item {
+      padding: 0 0.5rem;
+      font-size: 0.929rem;
+      color: $gray-600;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 0 0.5rem;
+      }
+
+      b {
+        display: block;
+        color: $gray-900;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+    }
+
+    .bookmaker {
+      display: block;
+
+   	  img {
+       	height: 26px;
+        margin: 0;
+   	  }
+    }
+
+    .result {
+      font-weight: 600;
+      font-size: 1rem;
+      color: $gray-900;
+      margin: 0;
+      line-height: 1.3;
+    }
+  }
+
+  
+  &__score {
+    font-size: 2.5rem;
+    font-weight: 600;
+    align-self: center;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
+
+    &-1 {
+      display: inline-block;
+      padding-right: 7px;
+    }
+
+    &-2 {
+      display: inline-block;
+      position: relative;
+      padding-left: 7px;
+
+      &:before {
+        display: block;
+        content: ":";
+        position: absolute;
+        left: -7px;
+        top: -1px;
+      }
+    }
+  }
+
+  &__comment {
+    padding: 10px;
+    background: #FDFFDB;
+    border-radius: 5px;
+  }
+
+  .share-with {
+    margin-top: 1rem;
+  }
+
+  &--win {
+  	background-color: rgba(212, 237, 218, 0.5);
+
+  	.result {
+  	  color: $green;
+  	}
+  }
+
+  &--lose {
+   	background-color: rgba(248, 215, 218, 0.5);
+
+   	.result {
+   	  color: $red;
+   	}
+  }
+
+  &--draw {
+    background-color: #FDFFDB;
+  }
+}

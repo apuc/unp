@@ -1,0 +1,100 @@
+﻿//
+//  Горизонтальное верхнее меню
+//
+
+.win-nav {
+  display: none;
+}
+
+.nav-tabs .nav-link {
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.nav-main  { 
+  .nav-link {
+    font-size: 1.071em;
+    background: $gray-lighter;
+    color: $gray;
+    margin-right: 10px;
+
+    &:hover, &:focus {
+      color: $gray-darker;
+    }
+
+    &.active {
+      color: $gray-darker;
+      background: $border-color;
+    }
+  }
+}
+
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-menu {
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .nav-link {
+    color: $gray;
+    margin-right: 10px;
+    padding: 5px 10px 8px;
+    position: relative;
+
+    &:hover, &:focus {
+      color: $gray-darker;
+    }
+
+    &.active {
+      color: $gray-darker;
+    }
+  }
+}
+
+.nav-menu .active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-left: 8px solid rgba(35, 82, 124, 0);
+  border-right: 8px solid rgba(35, 82, 124, 0);
+  border-bottom: 8px solid #23527c;
+  left: 50%;
+  margin-left: -8px;
+  bottom: 0;
+}
+
+.nav-submenu {
+  background: #23527c;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.treeview-menu {
+  .nav-link {
+    margin: 0 10px;
+    position: relative;
+    padding: 5px 0 7px;
+    color: #C9D6DE;
+    text-decoration: none;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }  
+}
+	
+.treeview-menu .active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  background: theme-color("primary");
+  bottom: 0;
+  width: 100%;
+}
+

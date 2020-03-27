@@ -1,0 +1,19 @@
+User-Agent: *
+Allow: /
+Disallow: /*.php
+Disallow: /*.html
+Disallow: /admin
+Disallow: /login
+Disallow: /logout
+Disallow: /password
+Disallow: /reviews/sent
+Disallow: /profile
+Disallow: /search
+Disallow: /ajax
+Disallow: /cart
+Disallow: /order
+Disallow: /api
+
+Crawl-delay: 0.5
+Host: sportliga.com
+Sitemap: https://sportliga.com/sitemap.xml

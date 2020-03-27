@@ -1,0 +1,144 @@
+﻿/**
+ *  Формы и кнопки
+ *
+ */
+
+.form-control {
+    padding-left:  0.5rem;
+    padding-right: 0.5rem;
+}
+
+.form-control-sm {
+    font-size: 0.929rem;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-size:      0.875rem;
+    border-radius:  15px;
+    font-weight:    600;
+    line-height:    1.4;
+
+    &:hover, &:focus {
+        background-color: $hover-color;
+        border-color:     $hover-color;
+        color:            $white;
+    }
+}
+
+.btn:focus, .btn:active,
+.btn:active:focus {
+    outline:        0;
+    outline-offset: 0;
+}
+
+.btn-theme {
+    font-weight:     700;
+    padding:         0 20px;
+    font-size:       11px;
+    line-height:     30px;
+    height:          30px;
+    color:           $white;
+    background:      $gray-700;
+    border:          none;
+    border-radius:   30px;
+    text-transform:  uppercase;
+    letter-spacing:  1px;
+    display:         inline-block;
+    transition:      all .25s ease;
+    text-decoration: none;
+
+    &:hover, &:focus {
+        background:      $hover-color;
+        color:           $white;
+        text-decoration: none;
+    }
+}
+
+.btn-more-box {
+    width:          100%;
+    text-align:     center;
+    margin-top:     auto;
+    padding-top:    15px;
+    padding-bottom: 10px;
+}
+
+.btn-more {
+    color:            #212529;
+    background-color: $gray-300;
+    padding-left:     1rem;
+    padding-right:    1rem;
+
+    &:hover, &:focus {
+        background: $hover-color;
+        color:      $white;
+    }
+}
+
+
+.btn-light {
+    background-color: $white;
+    border:           1px solid $gray-300;
+
+    &:hover, &:focus {
+        color:            $white !important;
+        background-color: $hover-color;
+        border-color:     $hover-color;
+    }
+}
+
+label {
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #e9ecef;
+    border-color:     #e9ecef;
+}
+
+.btn-secondary {
+    background-color: #7c868f;
+    border-color:     $gray-500;
+
+    &.active {
+        background-color: #545b62;
+        border-color:     #545b62;
+    }
+}
+
+.btn {
+    .fa {
+        margin-right: 3px;
+    }
+}
+
+.btn-link {
+    color: $gray-900;
+
+    &.btn {
+        text-decoration: underline;
+
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+// legal
+.policy-box, .custom-checkbox {
+    label {
+        font-weight: normal;
+    }
+}
+
+.invalid-feedback {
+    display:    none;
+    width:      100%;
+    margin-top: 0.25rem;
+    font-size:  90%;
+    color:      $red;
+}

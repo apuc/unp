@@ -1,0 +1,16 @@
+﻿/**
+ * Прокрутка
+ */
+
+.ss-scrollbar-vertically {
+    background-color: #fff;
+    width:            5px;
+    position:         absolute;
+    right:            0;
+    top:              0;
+}
+
+.ss-scrollbar-vertically-bar {
+    background-color: $blue-dark;
+    width:            5px;
+}
